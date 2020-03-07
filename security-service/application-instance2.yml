@@ -1,0 +1,7 @@
+spring:
+  ldap:
+    embedded:
+      port: 8388
+
+server:
+  port: 9899
