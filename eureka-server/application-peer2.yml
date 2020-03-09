@@ -6,7 +6,6 @@ eureka:
     hostname: eureka2
     metadata-map:
       zone: zone1
-    instance-id: ${spring.application.name}:${server.port}
   client:
     region: region-1
     service-url:
