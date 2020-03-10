@@ -3,8 +3,8 @@ server:
 
 eureka:
   instance:
-    hostname: eureka-peer1
+    hostname: ${EUREKA_SERVER_HOST_PEER1:eureka1}
   client:
     region: region-1
     service-url:
-      defaultZone: http://eureka-peer1:8761/eureka/,http://eureka-peer2:8762/eureka/
+      defaultZone: http://${EUREKA_SERVER_HOST_PEER1:eureka1}:8761/eureka/,http://${EUREKA_SERVER_HOST_PEER2:eureka2}:8762/eureka/
