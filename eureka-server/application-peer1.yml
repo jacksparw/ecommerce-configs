@@ -3,10 +3,10 @@ server:
 
 eureka:
   instance:
-    hostname: ${EUREKA_SERVER_HOST_PEER1:eureka1}
+    hostname: eureka-peer1
     metadata-map:
       zone: zone1
   client:
     region: region-1
     service-url:
-      zone1: http://${EUREKA_SERVER_HOST_PEER1:eureka1}:8761/eureka/,http://${EUREKA_SERVER_HOST_PEER2:eureka2}:8762/eureka/
+      zone1: http://eureka-peer1:8761/eureka/,http://eureka-peer2:8762/eureka/
