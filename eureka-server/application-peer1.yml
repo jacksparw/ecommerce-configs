@@ -4,9 +4,7 @@ server:
 eureka:
   instance:
     hostname: eureka-peer1
-    metadata-map:
-      zone: zone1
   client:
     region: region-1
     service-url:
-      zone1: http://eureka-peer1:8761/eureka/,http://eureka-peer2:8762/eureka/
+      defaultZone: http://eureka-peer1:8761/eureka/,http://eureka-peer2:8762/eureka/
