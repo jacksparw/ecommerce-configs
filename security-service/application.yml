@@ -1,21 +1,19 @@
 #PROFILE
+
 spring:
-  profiles:
-    active: instance1
+  ldap:
+    embedded:
+      port: 8387
+
+server:
+  port: 9898
 
 eureka:
-  instance:
-    metadata-map:
-      zone: zone1
-    instance-id: ${spring.application.name}:${server.port}
   healthcheck:
     enabled: true
   client:
     healthcheck:
       enabled: true
-    prefer-same-zone-eureka: true
     region: region-1
     service-url:
-      zone1: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
-    availability-zones:
-      region-1: zone1
+      defaultZone: http://${EUREKA_SERVER_HOST_PEER1:eureka1}:8761/eureka/,http://${EUREKA_SERVER_HOST_PEER2:eureka2}:8762/eureka/

@@ -1,7 +1,0 @@
-spring:
-  ldap:
-    embedded:
-      port: 8387
-
-server:
-  port: 9898
