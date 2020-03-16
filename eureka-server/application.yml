@@ -5,3 +5,5 @@ spring:
 
 eureka:
   environment: ecommerce-test
+  server:
+    enableSelfPreservation: false
